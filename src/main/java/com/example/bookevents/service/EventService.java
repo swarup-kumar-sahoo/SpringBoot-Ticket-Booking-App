@@ -41,7 +41,9 @@ public class EventService {
     public Event updateEvent(String id, Event updateEvent){
         Event existing = getEventById(id);
 
+        existing.setType(updateEvent.getType());
         existing.setTitle(updateEvent.getTitle());
+        existing.setDescription(updateEvent.getDescription());
         existing.setVenue(updateEvent.getVenue());
         existing.setCity(updateEvent.getCity());
         existing.setDate(updateEvent.getDate());
