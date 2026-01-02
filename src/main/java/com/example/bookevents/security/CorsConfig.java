@@ -18,7 +18,7 @@ public class CorsConfig {
         config.setAllowedOrigins(List.of(
                 "http://localhost:3000",
                 "http://127.0.0.1:3000",
-                "https://evnt.vercel.app" // add later if deployed
+                "https://evnt-app.vercel.app" // add later if deployed
         ));
 
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
