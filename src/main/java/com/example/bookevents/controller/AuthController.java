@@ -19,6 +19,11 @@ public class AuthController {
         return authService.register(user);
     }
 
+    @GetMapping("/{id}")
+    public User getUserById(@PathVariable String id) {
+        return authService.getUserById(id);
+    }
+
     @PostMapping("/create-admin")
     public User createAdmin(@RequestBody User user) {
         return authService.createAdmin(user);
@@ -30,6 +35,10 @@ public class AuthController {
         User user = authService.loginAndGetUser(request);
         String token = authService.generateToken(user);
 
-        return new AuthResponse(token, user.getRole());
+        return new AuthResponse(
+                token,
+                user.getRole(),
+                user.getId()
+        );
     }
 }

@@ -27,6 +27,12 @@ public class AuthService {
         return userRepository.save(user);
     }
 
+    // GET USER BY ID
+    public User getUserById(String id) {
+        return userRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("User not found with id: " + id));
+    }
+
     // ADMIN CREATION
     public User createAdmin(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
