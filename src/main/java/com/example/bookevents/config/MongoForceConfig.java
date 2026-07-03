@@ -11,7 +11,8 @@ public class MongoForceConfig {
     @Bean
     public MongoClient mongoClient() {
         return MongoClients.create(
-                "mongodb+srv://bookevents_user:StrongPassword123@ticketbookingcluster01.salsn5n.mongodb.net/bookevents?retryWrites=true&w=majority"
+                // "mongodb+srv://bookevents_user:StrongPassword123@ticketbookingcluster01.salsn5n.mongodb.net/bookevents?retryWrites=true&w=majority"
+            "mongodb+srv://kumarswarup7272_db_user:3UBKD8hnGVHNymDU@admincluster.0v3xxi2.mongodb.net/?appName=adminCluster"
         );
     }
 }
